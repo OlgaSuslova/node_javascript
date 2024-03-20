@@ -1,0 +1,12 @@
+// const np = require('password_generation_byolga')
+function generatePassword(){
+	let length = 8,
+	charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	res = '';
+	for (let i = 0, n = charset.length; i < length; ++i) {
+		res += charset.charAt(Math.floor(Math.random() * n));
+	}
+	return res;
+}
+
+module.exports = { generatePassword }
