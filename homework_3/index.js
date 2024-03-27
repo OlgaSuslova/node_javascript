@@ -4,8 +4,6 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static('static'));
-
 const countPage = path.join(__dirname, 'count.json');
 const counter = JSON.parse(fs.readFileSync(countPage, 'utf-8'));
 
